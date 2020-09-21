@@ -199,6 +199,17 @@ let srghma-forks-nonpublished =
           , version =
               "master"
           }
+      , html-parser =
+          { dependencies =
+              [ "console"
+              , "quickcheck"
+              , "string-parsers"
+              ]
+          , repo =
+              "https://github.com/srghma/purescript-html-parser.git"
+          , version =
+              "master"
+          }
       }
 
 let other =
