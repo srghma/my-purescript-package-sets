@@ -60,7 +60,7 @@ let srghma-forks-published =
         λ(upstream : ./upstreamTypeChunk.dhall)
       → { halogen =
             { dependencies =
-                upstream.halogen.dependencies
+                upstream.halogen.dependencies # ["event"]
             , repo =
                 "https://github.com/srghma/purescript-halogen.git"
             , version =
