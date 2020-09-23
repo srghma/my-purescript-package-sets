@@ -22,8 +22,6 @@ in  { halogen :
         Package
     , dom-indexed :
         Package
-    , argonaut-core :
-        Package
     , slug :
         Package
     , foldable-traversable :

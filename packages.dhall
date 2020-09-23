@@ -137,13 +137,6 @@ let srghma-forks-published =
               , version =
                   "patch-1"
               }
-        , argonaut-core =
-              upstream.argonaut-core
-            ⫽ { repo =
-                  "https://github.com/srghma/purescript-argonaut-core.git"
-              , version =
-                  "master"
-              }
         , slug =
               upstream.slug
             ⫽ { repo =
