@@ -54,6 +54,23 @@ let srghma-packages =
           , version =
               "master"
           }
+      , record-extra-srghma =
+          { dependencies =
+              [ "record"
+              , "typelevel-prelude"
+              , "unfoldable"
+              , "control"
+              , "assert"
+              , "lists"
+              , "parallel"
+              , "record-extra"
+              , "js-timers"
+              ]
+          , repo =
+              "https://github.com/srghma/purescript-record-extra-srghma.git"
+          , version =
+              "master"
+          }
       }
 
 let srghma-forks-published =
