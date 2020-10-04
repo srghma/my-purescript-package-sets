@@ -220,6 +220,26 @@ let srghma-forks-nonpublished =
           , version =
               "master"
           }
+      , webpack-loader-api =
+          { dependencies =
+              [ "aff"
+              , "aff-promise"
+              , "console"
+              , "effect"
+              , "foldable-traversable"
+              , "foreign"
+              , "foreign-object"
+              , "node-buffer"
+              , "node-path"
+              , "prelude"
+              , "psci-support"
+              , "transformers"
+              ]
+          , repo =
+              "https://github.com/srghma/purescript-webpack-loader-api.git"
+          , version =
+              "master"
+          }
       }
 
 let other =
