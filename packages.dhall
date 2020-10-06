@@ -71,6 +71,22 @@ let srghma-packages =
           , version =
               "master"
           }
+      , foreign-js-map =
+          { dependencies =
+              [ "console", "effect", "psci-support", "nullable", "functions" ]
+          , repo =
+              "https://github.com/srghma/purescript-foreign-js-map.git"
+          , version =
+              "master"
+          }
+      , foreign-js-set =
+          { dependencies =
+              [ "console", "effect", "psci-support", "nullable", "functions" ]
+          , repo =
+              "https://github.com/srghma/purescript-foreign-js-set.git"
+          , version =
+              "master"
+          }
       }
 
 let srghma-forks-published =
