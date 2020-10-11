@@ -340,6 +340,32 @@ let other =
           , version =
               "master"
           }
+      , graphql-client =
+          { dependencies =
+              [ "affjax"
+              , "effect"
+              , "generics-rep"
+              , "node-fs-aff"
+              , "prelude"
+              , "proxy"
+              , "psci-support"
+              , "record"
+              , "argonaut-core"
+              , "argonaut-codecs"
+              , "argonaut-generic"
+              , "typelevel-prelude"
+              , "debug"
+              , "spec"
+              , "variant"
+              , "protolude"
+              , "web-socket"
+              , "unordered-collection"
+              ]
+          , repo =
+              "https://github.com/purescript-graphql-client/purescript-graphql-client.git"
+          , version =
+              "master"
+          }
       }
 
 in    λ(upstream : ./upstreamTypeChunk.dhall)
