@@ -193,6 +193,23 @@ let srghma-forks-published =
             , version =
                 "patch-1"
             }
+        , browser-cookies =
+            { dependencies =
+                [ "console"
+                , "debug"
+                , "effect"
+                , "foldable-traversable"
+                , "js-date"
+                , "maybe"
+                , "prelude"
+                , "psci-support"
+                , "strings"
+                ]
+            , repo =
+                "https://github.com/srghma/purescript-browser-cookies.git"
+            , version =
+                "patch-1"
+            }
         }
 
 let srghma-forks-nonpublished =
