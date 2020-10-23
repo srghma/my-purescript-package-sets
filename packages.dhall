@@ -177,22 +177,22 @@ let srghma-forks-published =
               , version =
                   "master"
               }
-        , foldable-traversable =
-            { dependencies =
-                upstream.foldable-traversable.dependencies
-            , repo =
-                "https://github.com/srghma/purescript-foldable-traversable.git"
-            , version =
-                "master"
-            }
-        , either =
-            { dependencies =
-                upstream.either.dependencies
-            , repo =
-                "https://github.com/srghma/purescript-either.git"
-            , version =
-                "patch-1"
-            }
+        -- , foldable-traversable =
+        --     { dependencies =
+        --         upstream.foldable-traversable.dependencies
+        --     , repo =
+        --         "https://github.com/srghma/purescript-foldable-traversable.git"
+        --     , version =
+        --         "master"
+        --     }
+        -- , either =
+        --     { dependencies =
+        --         upstream.either.dependencies
+        --     , repo =
+        --         "https://github.com/srghma/purescript-either.git"
+        --     , version =
+        --         "patch-1"
+        --     }
         , browser-cookies =
             { dependencies =
                 [ "console"
