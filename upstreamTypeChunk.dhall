@@ -28,4 +28,6 @@ in  { halogen :
         Package
     , either :
         Package
+    , node-process :
+        Package
     }
