@@ -75,6 +75,24 @@ let srghma-packages =
         , repo = "https://github.com/srghma/purescript-foreign-js-set.git"
         , version = "master"
         }
+      , envparse =
+        { dependencies =
+          [ "console"
+          , "effect"
+          , "psci-support"
+          , "nullable"
+          , "functions"
+          , "either"
+          , "generics-rep"
+          , "lists"
+          , "ordered-collections"
+          , "strings"
+          , "free-alternative"
+          , "node-process"
+          ]
+        , repo = "https://github.com/srghma/purescript-envparse.git"
+        , version = "master"
+        }
       }
 
 let srghma-forks-published =
@@ -160,6 +178,11 @@ let srghma-forks-published =
             , repo = "https://github.com/srghma/purescript-browser-cookies.git"
             , version = "patch-1"
             }
+          , node-process =
+                upstream.node-process
+            //  { repo = "https://github.com/srghma/purescript-node-process.git"
+                , version = "master"
+                }
           }
 
 let srghma-forks-nonpublished =
@@ -202,6 +225,36 @@ let srghma-forks-nonpublished =
           , "transformers"
           ]
         , repo = "https://github.com/srghma/purescript-webpack-loader-api.git"
+        , version = "master"
+        }
+      , spec-should-equal-or-satisfy =
+        { dependencies =
+          [ "aff"
+          , "aff-promise"
+          , "console"
+          , "effect"
+          , "foldable-traversable"
+          , "foreign"
+          , "foreign-object"
+          , "node-buffer"
+          , "node-path"
+          , "prelude"
+          , "psci-support"
+          , "transformers"
+          ]
+        , repo = "https://github.com/srghma/purescript-spec-should-equal-or-satisfy.git"
+        , version = "master"
+        }
+      , free-alternative =
+        { dependencies =
+          [ "console"
+          , "effect"
+          , "psci-support"
+          , "spec"
+          , "free"
+          , "freeap"
+          ]
+        , repo = "https://github.com/srghma/purescript-free-alternative.git"
         , version = "master"
         }
       }
