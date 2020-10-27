@@ -183,6 +183,11 @@ let srghma-forks-published =
             //  { repo = "https://github.com/srghma/purescript-node-process.git"
                 , version = "master"
                 }
+          , either =
+                upstream.either
+            //  { repo = "https://github.com/purescript/purescript-either.git"
+                , version = "36ba0fa"
+                }
           }
 
 let srghma-forks-nonpublished =
