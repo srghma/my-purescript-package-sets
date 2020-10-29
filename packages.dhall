@@ -185,8 +185,8 @@ let srghma-forks-published =
                 }
           , either =
                 upstream.either
-            //  { repo = "https://github.com/purescript/purescript-either.git"
-                , version = "36ba0fa"
+            //  { repo = "https://github.com/srghma/purescript-either.git"
+                , version = "5aac6a0"
                 }
           }
 
@@ -359,6 +359,40 @@ let other =
           ]
         , repo =
             "https://github.com/purescript-graphql-client/purescript-graphql-client.git"
+        , version = "master"
+        }
+      , postgresql-client =
+        { dependencies =
+          [ "aff"
+          , "argonaut"
+          , "arrays"
+          , "assert"
+          , "bifunctors"
+          , "bytestrings"
+          , "console"
+          , "datetime"
+          , "decimals"
+          , "effect"
+          , "either"
+          , "exceptions"
+          , "foldable-traversable"
+          , "foreign"
+          , "foreign-generic"
+          , "foreign-object"
+          , "js-date"
+          , "lists"
+          , "maybe"
+          , "newtype"
+          , "nullable"
+          , "prelude"
+          , "psci-support"
+          , "string-parsers"
+          , "test-unit"
+          , "transformers"
+          , "tuples"
+          ]
+        , repo =
+            "https://github.com/rightfold/purescript-postgresql-client.git"
         , version = "master"
         }
       }
