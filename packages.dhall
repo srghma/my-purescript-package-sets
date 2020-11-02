@@ -188,6 +188,11 @@ let srghma-forks-published =
             //  { repo = "https://github.com/srghma/purescript-either.git"
                 , version = "5aac6a0"
                 }
+          , express =
+                upstream.express
+            //  { repo = "https://github.com/srghma/purescript-express.git"
+                , version = "master"
+                }
           }
 
 let srghma-forks-nonpublished =
@@ -260,6 +265,22 @@ let srghma-forks-nonpublished =
           , "freeap"
           ]
         , repo = "https://github.com/srghma/purescript-free-alternative.git"
+        , version = "master"
+        }
+      , express-passport =
+        { dependencies =
+          [ "console"
+          , "effect"
+          , "psci-support"
+          , "maybe"
+          , "either"
+          , "express"
+          , "spec"
+          , "argonaut-codecs"
+          , "foreign"
+          , "newtype"
+          ]
+        , repo = "https://github.com/srghma/purescript-express-passport.git"
         , version = "master"
         }
       }
