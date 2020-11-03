@@ -93,6 +93,16 @@ let srghma-packages =
         , repo = "https://github.com/srghma/purescript-envparse.git"
         , version = "master"
         }
+      , url-regex-safe =
+        { dependencies =
+          [ "console"
+          , "effect"
+          , "psci-support"
+          , "strings"
+          ]
+        , repo = "https://github.com/srghma/purescript-url-regex-safe.git"
+        , version = "master"
+        }
       }
 
 let srghma-forks-published =
