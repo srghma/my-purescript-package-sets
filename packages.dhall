@@ -19,6 +19,17 @@ let srghma-packages =
         , repo = "https://github.com/srghma/purescript-protolude.git"
         , version = "master"
         }
+      , selenium-webdriver =
+          { dependencies =
+              [ "aff"
+              , "aff-reattempt"
+              , "aff-promise"
+              , "web-html"
+              , "web-uievents"
+              ]
+          , repo = "https://github.com/purescript-selenium-webdriver/purescript-selenium-webdriver.git"
+          , version = "master"
+          }
       , halogen-material-components-web =
         { dependencies =
           [ "arrays"
@@ -94,116 +105,109 @@ let srghma-packages =
         , version = "master"
         }
       , url-regex-safe =
-        { dependencies =
-          [ "console"
-          , "effect"
-          , "psci-support"
-          , "strings"
-          ]
+        { dependencies = [ "console", "effect", "psci-support", "strings" ]
         , repo = "https://github.com/srghma/purescript-url-regex-safe.git"
         , version = "master"
         }
       }
 
 let srghma-forks-published =
-          \(upstream : ./upstreamTypeChunk.dhall)
-      ->  { halogen =
-            { dependencies = upstream.halogen.dependencies # [ "event" ]
-            , repo = "https://github.com/srghma/purescript-halogen.git"
-            , version = "hydration-wip-2"
-            }
-          , halogen-vdom =
-            { dependencies = upstream.halogen-vdom.dependencies
-            , repo = "https://github.com/srghma/purescript-halogen-vdom.git"
-            , version = "master"
-            }
-          , halogen-hooks =
-                  upstream.halogen-hooks
-              //  { repo =
-                      "https://github.com/srghma/purescript-halogen-hooks.git"
-                  , version = "master"
-                  }
-          , halogen-storybook =
-                  upstream.halogen-storybook
-              //  { repo =
-                      "https://github.com/srghma/purescript-halogen-storybook.git"
-                  , version = "master"
-                  }
-          , halogen-select =
-                  upstream.halogen-select
-              //  { repo =
-                      "https://github.com/srghma/purescript-halogen-select.git"
-                  , version = "master"
-                  }
-          , halogen-formless =
-                  upstream.halogen-formless
-              //  { repo =
-                      "https://github.com/srghma/purescript-halogen-formless.git"
-                  , version = "master"
-                  }
-          , node-http =
-                  upstream.node-http
-              //  { repo = "https://github.com/srghma/purescript-node-http.git"
-                  , version = "master"
-                  }
-          , hyper =
-                  upstream.hyper
-              //  { repo = "https://github.com/srghma/hyper.git"
-                  , version = "patch-1"
-                  }
-          , web-dom =
-                  upstream.web-dom
-              //  { repo = "https://github.com/srghma/purescript-web-dom.git"
-                  , version = "patch-1"
-                  }
-          , media-types =
-                  upstream.media-types
-              //  { repo =
-                      "https://github.com/srghma/purescript-media-types.git"
-                  , version = "patch-1"
-                  }
-          , dom-indexed =
-                  upstream.dom-indexed
-              //  { repo =
-                      "https://github.com/srghma/purescript-dom-indexed.git"
-                  , version = "patch-1"
-                  }
-          , slug =
-                  upstream.slug
-              //  { repo = "https://github.com/srghma/purescript-slug.git"
-                  , version = "master"
-                  }
-          , browser-cookies =
-            { dependencies =
-              [ "console"
-              , "debug"
-              , "effect"
-              , "foldable-traversable"
-              , "js-date"
-              , "maybe"
-              , "prelude"
-              , "psci-support"
-              , "strings"
-              ]
-            , repo = "https://github.com/srghma/purescript-browser-cookies.git"
-            , version = "patch-1"
-            }
-          , node-process =
+      \(upstream : ./upstreamTypeChunk.dhall) ->
+        { halogen =
+          { dependencies = upstream.halogen.dependencies # [ "event" ]
+          , repo = "https://github.com/srghma/purescript-halogen.git"
+          , version = "hydration-wip-2"
+          }
+        , halogen-vdom =
+          { dependencies = upstream.halogen-vdom.dependencies
+          , repo = "https://github.com/srghma/purescript-halogen-vdom.git"
+          , version = "master"
+          }
+        , halogen-hooks =
+                upstream.halogen-hooks
+            //  { repo =
+                    "https://github.com/srghma/purescript-halogen-hooks.git"
+                , version = "master"
+                }
+        , halogen-storybook =
+                upstream.halogen-storybook
+            //  { repo =
+                    "https://github.com/srghma/purescript-halogen-storybook.git"
+                , version = "master"
+                }
+        , halogen-select =
+                upstream.halogen-select
+            //  { repo =
+                    "https://github.com/srghma/purescript-halogen-select.git"
+                , version = "master"
+                }
+        , halogen-formless =
+                upstream.halogen-formless
+            //  { repo =
+                    "https://github.com/srghma/purescript-halogen-formless.git"
+                , version = "master"
+                }
+        , node-http =
+                upstream.node-http
+            //  { repo = "https://github.com/srghma/purescript-node-http.git"
+                , version = "master"
+                }
+        , hyper =
+                upstream.hyper
+            //  { repo = "https://github.com/srghma/hyper.git"
+                , version = "patch-1"
+                }
+        , web-dom =
+                upstream.web-dom
+            //  { repo = "https://github.com/srghma/purescript-web-dom.git"
+                , version = "patch-1"
+                }
+        , media-types =
+                upstream.media-types
+            //  { repo = "https://github.com/srghma/purescript-media-types.git"
+                , version = "patch-1"
+                }
+        , dom-indexed =
+                upstream.dom-indexed
+            //  { repo = "https://github.com/srghma/purescript-dom-indexed.git"
+                , version = "patch-1"
+                }
+        , slug =
+                upstream.slug
+            //  { repo = "https://github.com/srghma/purescript-slug.git"
+                , version = "master"
+                }
+        , browser-cookies =
+          { dependencies =
+            [ "console"
+            , "debug"
+            , "effect"
+            , "foldable-traversable"
+            , "js-date"
+            , "maybe"
+            , "prelude"
+            , "psci-support"
+            , "strings"
+            ]
+          , repo = "https://github.com/srghma/purescript-browser-cookies.git"
+          , version = "patch-1"
+          }
+        , node-process =
                 upstream.node-process
             //  { repo = "https://github.com/srghma/purescript-node-process.git"
                 , version = "master"
                 }
-          , either =
+        , either =
                 upstream.either
             //  { repo = "https://github.com/srghma/purescript-either.git"
                 , version = "5aac6a0"
                 }
-          , express =
+        , express =
                 upstream.express
             //  { repo = "https://github.com/srghma/purescript-express.git"
                 , version = "master"
                 }
-          }
+        }
 
 let srghma-forks-nonpublished =
       { halogen-svg =
@@ -262,18 +266,13 @@ let srghma-forks-nonpublished =
           , "psci-support"
           , "transformers"
           ]
-        , repo = "https://github.com/srghma/purescript-spec-should-equal-or-satisfy.git"
+        , repo =
+            "https://github.com/srghma/purescript-spec-should-equal-or-satisfy.git"
         , version = "master"
         }
       , free-alternative =
         { dependencies =
-          [ "console"
-          , "effect"
-          , "psci-support"
-          , "spec"
-          , "free"
-          , "freeap"
-          ]
+          [ "console", "effect", "psci-support", "spec", "free", "freeap" ]
         , repo = "https://github.com/srghma/purescript-free-alternative.git"
         , version = "master"
         }
@@ -422,14 +421,18 @@ let other =
           , "transformers"
           , "tuples"
           ]
-        , repo =
-            "https://github.com/rightfold/purescript-postgresql-client.git"
+        , repo = "https://github.com/rightfold/purescript-postgresql-client.git"
+        , version = "master"
+        }
+      , aff-reattempt =
+        { dependencies = [ "aff", "refs" ]
+        , repo = "https://github.com/slamdata/purescript-aff-reattempt.git"
         , version = "master"
         }
       }
 
-in      \(upstream : ./upstreamTypeChunk.dhall)
-    ->      srghma-packages
-        //  srghma-forks-published upstream
-        //  srghma-forks-nonpublished
-        //  other
+in  \(upstream : ./upstreamTypeChunk.dhall) ->
+          srghma-packages
+      //  srghma-forks-published upstream
+      //  srghma-forks-nonpublished
+      //  other
