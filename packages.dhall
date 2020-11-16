@@ -439,7 +439,7 @@ let other =
           , "node-fs-aff"
           , "run"
           ]
-        , repo = "https://github.com/slamdata/purescript-lunapark.git"
+        , repo = "https://github.com/srghma/purescript-lunapark.git"
         , version = "master"
         }
       }
