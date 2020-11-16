@@ -429,6 +429,19 @@ let other =
         , repo = "https://github.com/slamdata/purescript-aff-reattempt.git"
         , version = "master"
         }
+      , lunapark =
+        { dependencies =
+          [ "aff"
+          , "affjax"
+          , "argonaut-codecs"
+          , "argonaut-core"
+          , "css"
+          , "node-fs-aff"
+          , "run"
+          ]
+        , repo = "https://github.com/slamdata/purescript-lunapark.git"
+        , version = "master"
+        }
       }
 
 in  \(upstream : ./upstreamTypeChunk.dhall) ->
