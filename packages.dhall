@@ -442,6 +442,20 @@ let other =
         , repo = "https://github.com/srghma/purescript-lunapark.git"
         , version = "master"
         }
+      , faker =
+        { dependencies =
+          [ "arrays"
+          , "console"
+          , "effect"
+          , "newtype"
+          , "psci-support"
+          , "random"
+          , "safely"
+          , "strings"
+          ]
+        , repo = "https://github.com/kayhide/purescript-faker.git"
+        , version = "master"
+        }
       }
 
 in  \(upstream : ./upstreamTypeChunk.dhall) ->
