@@ -100,6 +100,7 @@ let srghma-packages =
           , "strings"
           , "free-alternative"
           , "node-process"
+          , "boxes"
           ]
         , repo = "https://github.com/srghma/purescript-envparse.git"
         , version = "master"
@@ -455,6 +456,29 @@ let other =
           ]
         , repo = "https://github.com/kayhide/purescript-faker.git"
         , version = "master"
+        }
+      , boxes =
+        { dependencies =
+          [ "generics-rep"
+          , "prelude"
+          , "profunctor"
+          , "strings"
+          , "stringutils"
+          ]
+        , repo = "https://github.com/cdepillabout/purescript-boxes.git"
+        , version = "master"
+        }
+      , aff-retry =
+        { dependencies =
+          [ "aff"
+          , "transformers"
+          , "exceptions"
+          , "random"
+          , "datetime"
+          , "prelude"
+          ]
+        , repo = "https://github.com/srghma/purescript-aff-retry.git"
+        , version = "patch-1"
         }
       }
 
