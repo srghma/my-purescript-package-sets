@@ -480,6 +480,27 @@ let other =
         , repo = "https://github.com/srghma/purescript-aff-retry.git"
         , version = "patch-1"
         }
+      , websocket-simple =
+        { dependencies =
+          [ "web-socket"
+          , "web-events"
+          , "effect"
+          , "exceptions"
+          , "generics-rep"
+          , "var"
+          ]
+        , repo = "https://github.com/zudov/purescript-websocket-simple.git"
+        , version = "master"
+        }
+      , var =
+        { dependencies =
+          [ "effect"
+          , "contravariant"
+          , "invariant"
+          ]
+        , repo = "https://github.com/zudov/purescript-var.git"
+        , version = "master"
+        }
       }
 
 in  \(upstream : ./upstreamTypeChunk.dhall) ->
