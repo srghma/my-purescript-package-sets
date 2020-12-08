@@ -205,8 +205,13 @@ let srghma-forks-published =
                 }
         , express =
                 upstream.express
-            //  { repo = "https://github.com/srghma/purescript-express.git"
+            //  { repo = "https://github.com/purescript-express/purescript-express.git"
                 , version = "master"
+                }
+        , nodemailer =
+                upstream.nodemailer
+            //  { repo = "https://github.com/srghma/purescript-nodemailer.git"
+                , version = "patch-1"
                 }
         }
 
@@ -499,6 +504,23 @@ let other =
           , "invariant"
           ]
         , repo = "https://github.com/zudov/purescript-var.git"
+        , version = "master"
+        }
+      , jsdom =
+        { dependencies =
+          [ "console"
+          , "effect"
+          , "psci-support"
+          , "aff"
+          , "web-dom"
+          , "web-html"
+          , "exceptions"
+          , "nullable"
+          , "assert"
+          , "debug"
+          , "record"
+          ]
+        , repo = "https://github.com/srghma/purescript-jsdom.git"
         , version = "master"
         }
       }

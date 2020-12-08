@@ -16,4 +16,5 @@ in  { halogen : Package
     , either : Package
     , express : Package
     , node-process : Package
+    , nodemailer : Package
     }
