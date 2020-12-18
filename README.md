@@ -14,7 +14,7 @@ let additions = {=}
 
 in      upstream
     //  https://raw.githubusercontent.com/srghma/my-purescript-package-sets/master/packages.dhall
-          upstream.(https://raw.githubusercontent.com/srghma/my-purescript-package-sets/master/upstreamTypeChunk.dhall )
+          upstream.(https://raw.githubusercontent.com/srghma/my-purescript-package-sets/master/upstreamTypeChunk.dhall ) -- this space here is very important
     //  overrides
     //  additions
 ```
