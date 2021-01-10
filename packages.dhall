@@ -213,6 +213,16 @@ let srghma-forks-published =
             //  { repo = "https://github.com/srghma/purescript-nodemailer.git"
                 , version = "patch-1"
                 }
+        , web-html =
+            { repo = "https://github.com/purescript-web/purescript-web-html.git"
+            , version = "master"
+            , dependencies = upstream.nodemailer.dependencies # ["web-storage"]
+            }
+        , routing-duplex =
+            { repo = "https://github.com/arthurxavierx/purescript-routing-duplex.git"
+            , version = "master"
+            , dependencies = upstream.routing-duplex.dependencies
+            }
         }
 
 let srghma-forks-nonpublished =
@@ -521,6 +531,25 @@ let other =
           , "record"
           ]
         , repo = "https://github.com/srghma/purescript-jsdom.git"
+        , version = "master"
+        }
+      , unique-lists =
+        { dependencies =
+          [ "prelude"
+          , "ordered-collections"
+          , "lists"
+          ]
+        , repo = "https://github.com/colehaus/purescript-unique-lists.git"
+        , version = "master"
+        }
+      , csv =
+        { dependencies =
+          [ "prelude"
+          , "ordered-collections"
+          , "arrays"
+          , "parsing"
+          ]
+        , repo = "https://github.com/nwolverson/purescript-csv.git"
         , version = "master"
         }
       }

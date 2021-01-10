@@ -17,4 +17,5 @@ in  { halogen : Package
     , express : Package
     , node-process : Package
     , nodemailer : Package
+    , routing-duplex : Package
     }
