@@ -552,6 +552,11 @@ let other =
         , repo = "https://github.com/nwolverson/purescript-csv.git"
         , version = "master"
         }
+      , record-csv =
+        { dependencies = [ "free", "numbers", "parsing", "record", "typelevel-prelude" ]
+        , repo = "https://github.com/hjmtql/purescript-record-csv.git"
+        , version = "master"
+        }
       }
 
 in  \(upstream : ./upstreamTypeChunk.dhall) ->
