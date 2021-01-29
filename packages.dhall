@@ -20,16 +20,12 @@ let srghma-packages =
         , version = "master"
         }
       , selenium-webdriver =
-          { dependencies =
-              [ "aff"
-              , "aff-reattempt"
-              , "aff-promise"
-              , "web-html"
-              , "web-uievents"
-              ]
-          , repo = "https://github.com/purescript-selenium-webdriver/purescript-selenium-webdriver.git"
-          , version = "master"
-          }
+        { dependencies =
+          [ "aff", "aff-reattempt", "aff-promise", "web-html", "web-uievents" ]
+        , repo =
+            "https://github.com/purescript-selenium-webdriver/purescript-selenium-webdriver.git"
+        , version = "master"
+        }
       , halogen-material-components-web =
         { dependencies =
           [ "arrays"
@@ -205,7 +201,8 @@ let srghma-forks-published =
                 }
         , express =
                 upstream.express
-            //  { repo = "https://github.com/purescript-express/purescript-express.git"
+            //  { repo =
+                    "https://github.com/purescript-express/purescript-express.git"
                 , version = "master"
                 }
         , nodemailer =
@@ -214,15 +211,16 @@ let srghma-forks-published =
                 , version = "patch-1"
                 }
         , web-html =
-            { repo = "https://github.com/purescript-web/purescript-web-html.git"
-            , version = "master"
-            , dependencies = upstream.nodemailer.dependencies # ["web-storage"]
-            }
+          { repo = "https://github.com/purescript-web/purescript-web-html.git"
+          , version = "master"
+          , dependencies = upstream.nodemailer.dependencies # [ "web-storage" ]
+          }
         , routing-duplex =
-            { repo = "https://github.com/arthurxavierx/purescript-routing-duplex.git"
-            , version = "master"
-            , dependencies = upstream.routing-duplex.dependencies
-            }
+          { repo =
+              "https://github.com/arthurxavierx/purescript-routing-duplex.git"
+          , version = "master"
+          , dependencies = upstream.routing-duplex.dependencies
+          }
         }
 
 let srghma-forks-nonpublished =
@@ -474,12 +472,7 @@ let other =
         }
       , boxes =
         { dependencies =
-          [ "generics-rep"
-          , "prelude"
-          , "profunctor"
-          , "strings"
-          , "stringutils"
-          ]
+          [ "generics-rep", "prelude", "profunctor", "strings", "stringutils" ]
         , repo = "https://github.com/cdepillabout/purescript-boxes.git"
         , version = "master"
         }
@@ -508,11 +501,7 @@ let other =
         , version = "master"
         }
       , var =
-        { dependencies =
-          [ "effect"
-          , "contravariant"
-          , "invariant"
-          ]
+        { dependencies = [ "effect", "contravariant", "invariant" ]
         , repo = "https://github.com/zudov/purescript-var.git"
         , version = "master"
         }
@@ -534,26 +523,19 @@ let other =
         , version = "master"
         }
       , unique-lists =
-        { dependencies =
-          [ "prelude"
-          , "ordered-collections"
-          , "lists"
-          ]
+        { dependencies = [ "prelude", "ordered-collections", "lists" ]
         , repo = "https://github.com/colehaus/purescript-unique-lists.git"
         , version = "master"
         }
       , csv =
         { dependencies =
-          [ "prelude"
-          , "ordered-collections"
-          , "arrays"
-          , "parsing"
-          ]
+          [ "prelude", "ordered-collections", "arrays", "parsing" ]
         , repo = "https://github.com/nwolverson/purescript-csv.git"
         , version = "master"
         }
       , record-csv =
-        { dependencies = [ "free", "numbers", "parsing", "record", "typelevel-prelude" ]
+        { dependencies =
+          [ "free", "numbers", "parsing", "record", "typelevel-prelude" ]
         , repo = "https://github.com/hjmtql/purescript-record-csv.git"
         , version = "master"
         }
