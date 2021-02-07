@@ -501,19 +501,7 @@ let other =
       }
 
 in  \(upstream : ./upstreamTypeChunk.dhall) ->
-      let
-        upstream' = srghma-packages //  srghma-forks-published upstream srghma-forks-nonpublished other
-      in
-      upstream'
-      with event.version = "master"
-      with event.repo = "https://github.com/thomashoneyman/purescript-event"
-      with filterable.version = "master"
-      with filterable.repo
-          = "https://github.com/thomashoneyman/purescript-filterable"
-      with freeap.version = "master"
-      with freeap.repo = "https://github.com/thomashoneyman/purescript-freeap"
-      with quickcheck-laws.version = "master"
-      with quickcheck-laws.repo
-          = "https://github.com/thomashoneyman/purescript-quickcheck-laws"
-      with optparse.version = "patch-2"
-      with optparse.repo = "https://github.com/srghma/purescript-optparse"
+        srghma-packages
+    //  srghma-forks-published upstream
+    //  srghma-forks-nonpublished
+    //  other
