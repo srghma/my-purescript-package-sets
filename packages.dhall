@@ -14,18 +14,18 @@ let srghma-packages =
           , "debug"
           , "variant"
           , "ansi"
-          , "generics-rep"
+          , "url-regex-safe"
           ]
         , repo = "https://github.com/srghma/purescript-protolude.git"
         , version = "master"
         }
-      , selenium-webdriver =
-        { dependencies =
-          [ "aff", "aff-reattempt", "aff-promise", "web-html", "web-uievents" ]
-        , repo =
-            "https://github.com/purescript-selenium-webdriver/purescript-selenium-webdriver.git"
-        , version = "master"
-        }
+      -- , selenium-webdriver =
+      --   { dependencies =
+      --     [ "aff", "aff-reattempt", "aff-promise", "web-html", "web-uievents" ]
+      --   , repo =
+      --       "https://github.com/purescript-selenium-webdriver/purescript-selenium-webdriver.git"
+      --   , version = "master"
+      --   }
       , halogen-material-components-web =
         { dependencies =
           [ "arrays"
@@ -34,7 +34,6 @@ let srghma-packages =
           , "event"
           , "halogen-svg"
           , "effect"
-          , "generics-rep"
           , "halogen"
           , "numbers"
           , "prelude"
@@ -90,7 +89,6 @@ let srghma-packages =
           , "nullable"
           , "functions"
           , "either"
-          , "generics-rep"
           , "lists"
           , "ordered-collections"
           , "strings"
@@ -154,25 +152,10 @@ let srghma-forks-published =
             //  { repo = "https://github.com/srghma/hyper.git"
                 , version = "patch-1"
                 }
-        , web-dom =
-                upstream.web-dom
-            //  { repo = "https://github.com/srghma/purescript-web-dom.git"
-                , version = "patch-1"
-                }
-        , media-types =
-                upstream.media-types
-            //  { repo = "https://github.com/srghma/purescript-media-types.git"
-                , version = "patch-1"
-                }
         , dom-indexed =
                 upstream.dom-indexed
             //  { repo = "https://github.com/srghma/purescript-dom-indexed.git"
                 , version = "patch-1"
-                }
-        , slug =
-                upstream.slug
-            //  { repo = "https://github.com/srghma/purescript-slug.git"
-                , version = "master"
                 }
         , browser-cookies =
           { dependencies =
@@ -189,32 +172,11 @@ let srghma-forks-published =
           , repo = "https://github.com/srghma/purescript-browser-cookies.git"
           , version = "patch-1"
           }
-        , node-process =
-                upstream.node-process
-            //  { repo = "https://github.com/srghma/purescript-node-process.git"
-                , version = "master"
-                }
-        , either =
-                upstream.either
-            //  { repo = "https://github.com/srghma/purescript-either.git"
-                , version = "5aac6a0"
-                }
-        , express =
-                upstream.express
-            //  { repo =
-                    "https://github.com/purescript-express/purescript-express.git"
-                , version = "master"
-                }
         , nodemailer =
                 upstream.nodemailer
             //  { repo = "https://github.com/srghma/purescript-nodemailer.git"
                 , version = "patch-1"
                 }
-        , web-html =
-          { repo = "https://github.com/purescript-web/purescript-web-html.git"
-          , version = "master"
-          , dependencies = upstream.nodemailer.dependencies # [ "web-storage" ]
-          }
         , routing-duplex =
           { repo =
               "https://github.com/arthurxavierx/purescript-routing-duplex.git"
@@ -311,7 +273,7 @@ let srghma-forks-nonpublished =
 let other =
       { yarn =
         { dependencies =
-          [ "strings", "arrays", "generics-rep", "partial", "unicode" ]
+          [ "strings", "arrays", "partial", "unicode" ]
         , repo = "https://github.com/Thimoteus/purescript-yarn.git"
         , version = "master"
         }
@@ -348,7 +310,6 @@ let other =
         { dependencies =
           [ "console"
           , "effect"
-          , "generics-rep"
           , "psci-support"
           , "record"
           , "strings"
@@ -385,7 +346,6 @@ let other =
         { dependencies =
           [ "affjax"
           , "effect"
-          , "generics-rep"
           , "node-fs-aff"
           , "prelude"
           , "psci-support"
@@ -472,7 +432,7 @@ let other =
         }
       , boxes =
         { dependencies =
-          [ "generics-rep", "prelude", "profunctor", "strings", "stringutils" ]
+          [ "prelude", "profunctor", "strings", "stringutils" ]
         , repo = "https://github.com/cdepillabout/purescript-boxes.git"
         , version = "master"
         }
@@ -494,7 +454,6 @@ let other =
           , "web-events"
           , "effect"
           , "exceptions"
-          , "generics-rep"
           , "var"
           ]
         , repo = "https://github.com/zudov/purescript-websocket-simple.git"
@@ -542,7 +501,19 @@ let other =
       }
 
 in  \(upstream : ./upstreamTypeChunk.dhall) ->
-          srghma-packages
-      //  srghma-forks-published upstream
-      //  srghma-forks-nonpublished
-      //  other
+      let
+        upstream' = srghma-packages //  srghma-forks-published upstream srghma-forks-nonpublished other
+      in
+      upstream'
+      with event.version = "master"
+      with event.repo = "https://github.com/thomashoneyman/purescript-event"
+      with filterable.version = "master"
+      with filterable.repo
+          = "https://github.com/thomashoneyman/purescript-filterable"
+      with freeap.version = "master"
+      with freeap.repo = "https://github.com/thomashoneyman/purescript-freeap"
+      with quickcheck-laws.version = "master"
+      with quickcheck-laws.repo
+          = "https://github.com/thomashoneyman/purescript-quickcheck-laws"
+      with optparse.version = "patch-2"
+      with optparse.repo = "https://github.com/srghma/purescript-optparse"
