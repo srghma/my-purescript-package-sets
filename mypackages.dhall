@@ -19,3 +19,5 @@ in  myupstream
         = "https://github.com/thomashoneyman/purescript-quickcheck-laws"
     with optparse.version = "patch-2"
     with optparse.repo = "https://github.com/srghma/purescript-optparse"
+    with spec.version = "update-0-14"
+    with spec.repo = "https://github.com/srghma/purescript-spec"
