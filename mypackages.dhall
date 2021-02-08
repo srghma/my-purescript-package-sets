@@ -1,4 +1,4 @@
--- used as `/home/srghma/projects/package-sets/src/mypackages.dhall` in `./packages.dhall` of project
+-- used as `/home/srghma/projects/my-purescript-package-sets/mypackages.dhall` in `./packages.dhall` of project
 
 let upstream =
       /home/srghma/projects/package-sets/src/packages.dhall
@@ -11,16 +11,19 @@ let myupstream =
 in  myupstream
     with event.version = "master"
     with event.repo = "https://github.com/thomashoneyman/purescript-event"
+
     with filterable.version = "master"
-    with filterable.repo
-        = "https://github.com/thomashoneyman/purescript-filterable"
+    with filterable.repo = "https://github.com/thomashoneyman/purescript-filterable"
+
     with freeap.version = "master"
     with freeap.repo = "https://github.com/thomashoneyman/purescript-freeap"
+
     with quickcheck-laws.version = "master"
-    with quickcheck-laws.repo
-        = "https://github.com/thomashoneyman/purescript-quickcheck-laws"
+    with quickcheck-laws.repo = "https://github.com/thomashoneyman/purescript-quickcheck-laws"
+
     with optparse.version = "patch-2"
     with optparse.repo = "https://github.com/srghma/purescript-optparse"
+
     with spec.version = "update-0-14"
     with spec.repo = "https://github.com/srghma/purescript-spec"
 
@@ -47,3 +50,10 @@ in  myupstream
 
     with simple-json.version = "patch-1"
     with simple-json.repo = "https://github.com/srghma/purescript-simple-json"
+
+    with js-uri.version = "main"
+    with js-uri.repo = "https://github.com/srghma/purescript-js-uri"
+
+    with smolder.version = "master"
+    with smolder.dependencies = myupstream.smolder.dependencies # ["js-uri"]
+    with smolder.repo = "https://github.com/srghma/purescript-smolder"
