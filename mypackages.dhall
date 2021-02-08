@@ -1,3 +1,5 @@
+-- used as `/home/srghma/projects/package-sets/src/mypackages.dhall` in `./packages.dhall` of project
+
 let upstream =
       /home/srghma/projects/package-sets/src/packages.dhall
 
