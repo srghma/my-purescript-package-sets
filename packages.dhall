@@ -139,8 +139,8 @@ let srghma-forks-published =
         , halogen-formless =
                 upstream.halogen-formless
             //  { repo =
-                    "https://github.com/srghma/purescript-halogen-formless.git"
-                , version = "master"
+                    "https://github.com/thomashoneyman/purescript-halogen-formless.git"
+                , version = "hooks"
                 }
         , node-http =
                 upstream.node-http
@@ -179,9 +179,24 @@ let srghma-forks-published =
                 }
         , routing-duplex =
           { repo =
-              "https://github.com/arthurxavierx/purescript-routing-duplex.git"
-          , version = "master"
-          , dependencies = upstream.routing-duplex.dependencies
+              "https://github.com/srghma/purescript-routing-duplex.git"
+          , version = "polykindsUpdate"
+          , dependencies =
+            [ "arrays"
+            , "assert"
+            , "console"
+            , "control"
+            , "effect"
+            , "either"
+            , "lazy"
+            , "prelude"
+            , "profunctor"
+            , "psci-support"
+            , "quickcheck"
+            , "record"
+            , "strings"
+            , "js-uri"
+            ]
           }
         }
 
@@ -319,7 +334,7 @@ let other =
           , "ansi"
           , "dodo-printer"
           ]
-        , repo = "https://github.com/purescript-codegen/purescript-ps-cst.git"
+        , repo = "https://github.com/srghma/purescript-ps-cst.git"
         , version = "master"
         }
       , dodo-printer =
@@ -339,10 +354,10 @@ let other =
           , "psci-support"
           , "strings"
           ]
-        , repo = "https://github.com/natefaubion/purescript-dodo-printer.git"
+        , repo = "https://github.com/srghma/purescript-dodo-printer.git"
         , version = "master"
         }
-      , graphql-client =
+      , dillonkearns-graphql-client =
         { dependencies =
           [ "affjax"
           , "effect"
@@ -363,7 +378,7 @@ let other =
           ]
         , repo =
             "https://github.com/purescript-graphql-client/purescript-graphql-client.git"
-        , version = "master"
+        , version = "update-0-14"
         }
       , postgresql-client =
         { dependencies =
@@ -395,7 +410,7 @@ let other =
           , "transformers"
           , "tuples"
           ]
-        , repo = "https://github.com/rightfold/purescript-postgresql-client.git"
+        , repo = "https://github.com/srghma/purescript-postgresql-client.git"
         , version = "master"
         }
       , aff-reattempt =
@@ -433,7 +448,7 @@ let other =
       , boxes =
         { dependencies =
           [ "prelude", "profunctor", "strings", "stringutils" ]
-        , repo = "https://github.com/cdepillabout/purescript-boxes.git"
+        , repo = "https://github.com/srghma/purescript-boxes.git"
         , version = "master"
         }
       , aff-retry =

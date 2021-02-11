@@ -48,8 +48,11 @@ in  myupstream
     with foreign-generic.version = "master"
     with foreign-generic.repo = "https://github.com/srghma/purescript-foreign-generic"
 
-    with simple-json.version = "patch-1"
+    with simple-json.version = "master"
     with simple-json.repo = "https://github.com/srghma/purescript-simple-json"
+
+    with heterogeneous.version = "master"
+    with heterogeneous.repo = "https://github.com/srghma/purescript-heterogeneous"
 
     with js-uri.version = "main"
     with js-uri.repo = "https://github.com/srghma/purescript-js-uri"
@@ -57,3 +60,9 @@ in  myupstream
     with smolder.version = "master"
     with smolder.dependencies = myupstream.smolder.dependencies # ["js-uri"]
     with smolder.repo = "https://github.com/srghma/purescript-smolder"
+
+    with websocket-simple.version = "master"
+    with websocket-simple.repo = "https://github.com/srghma/purescript-websocket-simple"
+
+    with express.version = "master"
+    with express.repo = "https://github.com/purescript-express/purescript-express"
