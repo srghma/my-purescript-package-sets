@@ -198,6 +198,18 @@ let srghma-forks-published =
             , "js-uri"
             ]
           }
+        , routing-duplex-variant =
+          { repo =
+              "https://github.com/paluh/purescript-routing-duplex-variant.git"
+          , version = "master"
+          , dependencies =
+            [ "assert"
+            , "console"
+            , "effect"
+            , "routing-duplex"
+            , "variant"
+            ]
+          }
         }
 
 let srghma-forks-nonpublished =
