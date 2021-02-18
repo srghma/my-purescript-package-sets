@@ -180,7 +180,7 @@ let srghma-forks-published =
         , routing-duplex =
           { repo =
               "https://github.com/srghma/purescript-routing-duplex.git"
-          , version = "polykindsUpdate"
+          , version = "polykindsUpdate-variants"
           , dependencies =
             [ "arrays"
             , "assert"
@@ -199,8 +199,7 @@ let srghma-forks-published =
             ]
           }
         , routing-duplex-variant =
-          { repo =
-              "https://github.com/paluh/purescript-routing-duplex-variant.git"
+          { repo = "https://github.com/srghma/purescript-routing-duplex-variant.git"
           , version = "master"
           , dependencies =
             [ "assert"

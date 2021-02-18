@@ -66,3 +66,6 @@ in  myupstream
 
     with express.version = "master"
     with express.repo = "https://github.com/purescript-express/purescript-express"
+
+    with halogen-hooks-extra.version = "master"
+    with halogen-hooks-extra.repo = "https://github.com/srghma/purescript-halogen-hooks-extra"
