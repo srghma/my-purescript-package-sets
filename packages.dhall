@@ -139,8 +139,8 @@ let srghma-forks-published =
         , halogen-formless =
                 upstream.halogen-formless
             //  { repo =
-                    "https://github.com/thomashoneyman/purescript-halogen-formless.git"
-                , version = "hooks"
+                    "https://github.com/srghma/purescript-halogen-formless.git"
+                , version = "hooks-with-halogen-6"
                 }
         , node-http =
                 upstream.node-http
