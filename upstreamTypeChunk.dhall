@@ -1,3 +1,4 @@
+-- stolen from https://github.com/purescript/package-sets/blob/master/src/Package.dhall
 let Package = { dependencies : List Text, repo : Text, version : Text }
 
 in  { halogen : Package
